@@ -69,7 +69,7 @@ class CategoryUnitTest extends TestCase
         {
             $category = new Category(name: 'teste', description: 'N');
 
-            $this->assertTrue(false);
+            $this->fail();
         }catch(\Exception $th) {
             $this->assertInstanceOf(EntityValidationException::class, $th);
         }
