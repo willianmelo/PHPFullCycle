@@ -6,7 +6,7 @@ trait MethodsMagicsTrait
 {
     public function __get($property)
     {
-        if(isset($this->{$property})){
+        if (isset($this->{$property})) {
             return $this->{$property};
         }
 
@@ -14,8 +14,13 @@ trait MethodsMagicsTrait
         throw new Exception("Property {$property} not found in {$className} ");
     }
 
-    public function getId() : string
+    public function getId(): string
     {
         return (string)$this->id;
+    }
+
+    public function getCreatedAt(): string
+    {
+        return $this->createdAt->format('Y-m-d H:i:s');
     }
 }
