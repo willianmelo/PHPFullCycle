@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Domain\Entity;
+namespace Unit\Domain\Entity;
 
 use Core\Domain\Entity\Category;
 use Core\Domain\Exception\EntityValidationException;
@@ -67,7 +67,7 @@ class CategoryUnitTest extends TestCase
     {
         try
         {
-            $category = new Category(name: 'teste', description: 'N');
+            $category = new Category(name: 't', description: 'N');
 
             $this->fail();
         }catch(\Exception $th) {
@@ -75,5 +75,3 @@ class CategoryUnitTest extends TestCase
         }
     }
 }
-
-
